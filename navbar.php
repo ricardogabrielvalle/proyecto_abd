@@ -57,14 +57,7 @@
         </nav>
         </div>
 
-        <!-- Footer -->
-        <footer class="page-footer font-small blue fixed-bottom">
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">
-              © 2019 Copyright:
-                <a href="index.php"> Librería San Francisco.</a>
-            </div>
-        <!-- Copyright -->
+        
 
     </body>
 </html>
