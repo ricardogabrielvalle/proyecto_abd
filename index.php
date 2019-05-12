@@ -5,6 +5,89 @@
 	<?php include 'navbar.php'; ?>
 	<!--Carrusel -->
 	<?php include 'carrusel.php'; ?>
+
+    <!-- Modal inicio de sesión -->
+    <div class="modal fade" id="iniciar_sesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form onsubmit="return valida_Login();" method="POST" action="validaUsuario.php">
+              <div class="form-group">
+                <label for="InputEmail1">Email</label>
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese email" name="email">
+                <small id="email" name="email" class="form-text text-muted">Ingresar al sistema con tu usuario y contraseña o registrate.</small>
+              </div>
+              <div class="form-group">
+                <label for="InputPassword1">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-secondary btn-sm">Ingresar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!-- Button registrarse -->
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#registrarse" data-dismiss="modal">
+              ¡Registrate!
+            </button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal registrarse -->
+    <div class="modal fade" id="registrarse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrate.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="insertarUsuario.php" onsubmit="return valida();">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="Apellido">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-8">
+                  <label for="Emai">Email</label>
+                  <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="Password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Direccion">Direccion</label>
+                <input type="text" class="form-control" id="direccion" placeholder="1234 Main St" name="direccion">
+              </div>
+                <!-- Button trigger modal registrar -->
+              <button type="submit" class="btn btn-secondary btn-sm">Registrate</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 	<!-- Footer -->
     <footer class="page-footer font-small blue fixed-bottom">
     <!-- Copyright -->
