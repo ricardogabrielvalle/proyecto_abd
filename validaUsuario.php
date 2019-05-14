@@ -35,7 +35,13 @@ if ($resulta->num_rows > 0)
 if($inicio == false)
 {
     $conexion->close();
-    echo "error de inicio de sesion";
-    header('Location: ');
+    ?>
+    <!-- Navbar -->
+    <?php include 'navbar.php'; ?>
+        <center><h5><strong>
+            Ups...! Email y/o password no validos :(
+        </strong></h5>
+    <a class="btn btn-outline-dark" href="index.php" role="button">Ir a inicio</a></center>
+    <?php
 }
 ?>

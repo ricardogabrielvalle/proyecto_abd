@@ -58,7 +58,7 @@ $resultado = $conexion->query($sql);
                         </tbody>
                     </table>
                     <div class="container" align="right">
-                    	<button type="submit" class="btn btn-primary" name="send">Modificar</button>
+                    	<button type="submit" class="btn btn-primary" name="send">Eliminar</button>
                     </div>
                 </form>
             </div>

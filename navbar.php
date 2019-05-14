@@ -88,6 +88,34 @@ else
                   </div>
               </nav>
               </div>
+              <!-- Modal -->
+              <div class="modal fade" id="buscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Buscar en tiempo real.</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                       <center>
+                          <label for="caja_busqueda"><strong>Buscar:</strong></label>
+                          <input type="text" name="caja_busqueda" id="caja_busqueda">
+                       </center>
+
+                       <center>
+                        <div id="datos">
+
+                        </div>
+                       </center>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <?php
               }
               else if($nivel_usuario == "usuario")
@@ -109,11 +137,11 @@ else
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Mi perfil
+                        Mi cuenta
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Favoritos</a>
-                        <a class="dropdown-item" href="#">Perfil</a>
+                        <a class="dropdown-item" href="mis_favoritos.php">Favoritos</a>
+                        <a class="dropdown-item" href="mi_perfil.php">Perfil</a>
                       </div>
                     </li>
                     <li class="nav-item">
@@ -138,6 +166,34 @@ else
 
                   </div>
               </nav>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="buscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Buscar en tiempo real.</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                       <center>
+                          <label for="caja_busqueda"><strong>Buscar:</strong></label>
+                          <input type="text" name="caja_busqueda" id="caja_busqueda">
+                       </center>
+
+                       <center>
+                        <div id="datos">
+
+                        </div>
+                       </center>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <?php
               }
@@ -182,8 +238,37 @@ else
                   </div>
               </nav>
             </div>
+            <!-- Modal -->
+              <div class="modal fade" id="buscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Buscar en tiempo real.</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                       <center>
+                          <label for="caja_busqueda"><strong>Buscar:</strong></label>
+                          <input type="text" name="caja_busqueda" id="caja_busqueda">
+                       </center>
+
+                       <center>
+                        <div id="datos">
+
+                        </div>
+                       </center>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <?php
             }
         ?>
+        <script src="JS/main.js"></script>
     </body>
 </html>

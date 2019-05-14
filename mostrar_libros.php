@@ -25,6 +25,9 @@ $resultado = $conexion->query($sql);
                                 <th scope="col">Materia</th>
                                 <th scope="col">Páginas</th>
                                 <th scope="col">Encuadernación</th>
+                                <?php if($nivel_usuario == "usuario"):?>
+                                    <th scope="col">Favorito</th>
+                                <?php endif;?>
                             </tr>
                         </thead>
                         <?php while($row = $resultado->fetch_assoc()):?>
@@ -50,6 +53,14 @@ $resultado = $conexion->query($sql);
                                 <td><?php echo $materia ?></td>
                                 <td><?php echo $paginas ?></td>
                                 <td><?php echo $encuadernacion ?></td>
+                                <?php if($nivel_usuario == "usuario"):?>
+                                <td>
+                                    <form action="agregar_favorito.php" method="post">
+                                        <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
+                                        <button type="submit" class="btn btn-primary" name="favorito">Agregar</button>
+                                    </form>
+                                </td>
+                                <?php endif;?>
                             </tr>
                             
                             <?php endwhile; ?>

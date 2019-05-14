@@ -1,20 +1,12 @@
 <?php
-
-$titulo = $_POST['titulo'];
-$autor = $_POST['autor'];
-$isbn = $_POST['isbn'];
-$sinopsis = $_POST['sinopsis'];
-$editorial = $_POST['editorial'];
-$materia = $_POST['materia'];
-$paginas = $_POST['paginas'];
-$encuadernacion = $_POST['encuadernacion'];
+$codigo = $_POST['seleccion'];
+$eliminacion = false;
 require 'conexion.php';// se realiza la conexión a la BD
 
-$sql = "DELETE FROM libros WHERE titulo = '$titulo'"; 
-
+$sql = "DELETE FROM libros WHERE codigo = '$codigo'"; 
 if ($conexion->query($sql) === TRUE) 
 {
-    $estado_insercion = true;
+    $eliminacion = true;
 } 
 else 
 {
@@ -25,10 +17,10 @@ $conexion->close();
 ?>
 <!DOCTYPE html>
 <html>
-<title>HTML Tutorial</title>
+<title></title>
 <body>
 	<?php require 'navbar.php' ?>
-	<?php if($estado_insercion == true): ?>
+	<?php if($eliminacion == true): ?>
 		<div class="container" align="center">
 			<h1>Registro eliminado correctamente</h1>
 			<a class="btn btn-outline-dark" href="eliminar_libro.php" role="button">Eliminar otro libro</a>
