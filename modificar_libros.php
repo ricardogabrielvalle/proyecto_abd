@@ -25,6 +25,7 @@ $resultado = $conexion->query($sql);
                                 <th scope="col">Materia</th>
                                 <th scope="col">Páginas</th>
                                 <th scope="col">Encuadernación</th>
+                                <th scope="col">Precio</th>
                                 <th scope="col">Selecc.</th>
                             </tr>
                         </thead>
@@ -39,6 +40,7 @@ $resultado = $conexion->query($sql);
                             $materia = $row["materia"];
                             $paginas = $row["paginas"];
                             $encuadernacion = $row["encuadernacion"];
+                            $precio = $row["precio"];
                         ?>
                         <tbody>
                             <tr>
@@ -51,6 +53,7 @@ $resultado = $conexion->query($sql);
                                 <td><?php echo $materia ?></td>
                                 <td><?php echo $paginas ?></td>
                                 <td><?php echo $encuadernacion ?></td>
+                                <td><?php echo $precio ?></td>
                                 <td><input type="radio" value="<?php echo $codigo ?>" name="seleccion"></td>
                             </tr>
                             

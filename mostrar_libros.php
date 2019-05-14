@@ -12,7 +12,6 @@ $resultado = $conexion->query($sql);
 	<?php include 'navbar.php'; ?>
 	<div class="container" style="margin:auto;">
                 <h1>Libros</h1>
-                <form action="index.php">
                     <table class="table table-responsive">
                         <thead>
                             <tr>
@@ -25,7 +24,8 @@ $resultado = $conexion->query($sql);
                                 <th scope="col">Materia</th>
                                 <th scope="col">Páginas</th>
                                 <th scope="col">Encuadernación</th>
-                                <?php if($nivel_usuario == "usuario"):?>
+                                <th scope="col">Precio</th>
+                                <?php if(isset($nivel_usuario) && $nivel_usuario == "usuario"):?>
                                     <th scope="col">Favorito</th>
                                 <?php endif;?>
                             </tr>
@@ -41,6 +41,7 @@ $resultado = $conexion->query($sql);
                             $materia = $row["materia"];
                             $paginas = $row["paginas"];
                             $encuadernacion = $row["encuadernacion"];
+                            $precio = $row['precio'];
                         ?>
                         <tbody>
                             <tr>
@@ -53,7 +54,8 @@ $resultado = $conexion->query($sql);
                                 <td><?php echo $materia ?></td>
                                 <td><?php echo $paginas ?></td>
                                 <td><?php echo $encuadernacion ?></td>
-                                <?php if($nivel_usuario == "usuario"):?>
+                                <td><?php echo $precio ?></td>
+                                <?php if(isset($nivel_usuario) && $nivel_usuario == "usuario"):?>
                                 <td>
                                     <form action="agregar_favorito.php" method="post">
                                         <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
@@ -66,8 +68,11 @@ $resultado = $conexion->query($sql);
                             <?php endwhile; ?>
                         </tbody>
                     </table>
-                    <button type="submit" class="btn btn-primary" name="send">Ir al inicio</button>
-                </form>
+                    <form action="index.php">
+                        <div class="container" align="right">
+                            <button type="submit" class="btn btn-primary" name="send">Ir al inicio</button>
+                        </div>
+                    </form>
             </div>
             <?php $conexion->close(); ?>
 

@@ -13,6 +13,7 @@ $editorial = $row["editorial"];
 $materia = $row["materia"];
 $paginas = $row["paginas"];
 $encuadernacion = $row["encuadernacion"];
+$precio = $row["precio"];
 $conexion->close();
 ?>
 <!DOCTYPE html>
@@ -62,6 +63,10 @@ $conexion->close();
 		      <option>Pasta tradicional</option>
 		      <option>Pasta dura</option>
 		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="precio">Precio</label>
+		    <input type="text" class="form-control" id="precio" name="precio" value="<?php echo $precio ?>">
 		  </div>
 		  <div class="container" align="right">
 		  	<button type="submit" class="btn btn-primary">Actualizar</button>

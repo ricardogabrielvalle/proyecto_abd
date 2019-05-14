@@ -74,10 +74,9 @@ else
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                           <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-outline-dark my-2 my-sm-0" data-toggle="modal" data-target="#buscar">
-                              Buscar
+                              Buscar un libro
                             </button>
                           </form>
                         </li>
@@ -153,10 +152,9 @@ else
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                           <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-outline-dark my-2 my-sm-0" data-toggle="modal" data-target="#buscar">
-                              Buscar
+                              Buscar un libro
                             </button>
                           </form>
                         </li>
@@ -223,10 +221,9 @@ else
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                           <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-outline-dark my-2 my-sm-0" data-toggle="modal" data-target="#buscar">
-                              Buscar
+                              Buscar un libro
                             </button>
                           </form>
                         </li>

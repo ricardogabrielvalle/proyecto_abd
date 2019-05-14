@@ -24,6 +24,7 @@
                     <th scope="col">Materia</th>
                     <th scope="col">Páginas</th>
                     <th scope="col">Encuadernación</th>
+                    <th scope="col">Precio</th>
                 </tr>
             </thead>
 	<?php if ($resultado->num_rows > 0): ?>
@@ -43,6 +44,7 @@
                 $materia = $row_libro["materia"];
                 $paginas = $row_libro["paginas"];
                 $encuadernacion = $row_libro["encuadernacion"];
+                $precio = $row_libro['precio'];
 	        	?>
 	        	<tbody>
                 	<tr>
@@ -55,6 +57,7 @@
                         <td><?php echo $materia ?></td>
                         <td><?php echo $paginas ?></td>
                         <td><?php echo $encuadernacion ?></td>
+                        <td><?php echo $precio ?></td>
                     </tr>        
                 <?php endwhile; ?>      
 	    <?php endwhile; ?>

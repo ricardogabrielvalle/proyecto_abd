@@ -8,6 +8,7 @@ $editorial = $_POST['editorial'];
 $materia = $_POST['materia'];
 $paginas = $_POST['paginas'];
 $encuadernacion = $_POST['encuadernacion'];
+$precio = $_POST['precio'];
 
 require "conexion.php";
 
@@ -43,6 +44,10 @@ if ($conexion->query($sql) !== TRUE) {
     $error = true;
 }
 $sql = "UPDATE libros SET encuadernacion='$encuadernacion' WHERE codigo=$codigo";
+if ($conexion->query($sql) !== TRUE) {
+    $error = true;
+}
+$sql = "UPDATE libros SET precio='$precio' WHERE codigo=$codigo";
 if ($conexion->query($sql) !== TRUE) {
     $error = true;
 }

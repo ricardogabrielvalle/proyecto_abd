@@ -8,6 +8,7 @@ $editorial = $_POST['editorial'];
 $materia = $_POST['materia'];
 $paginas = $_POST['paginas'];
 $encuadernacion = $_POST['encuadernacion'];
+$precio = $_POST['precio'];
 $estado_insercion = false;
 /*
 echo "$titulo \n";
@@ -20,8 +21,8 @@ echo "$paginas \n";
 echo "$encuadernacion \n";
 */
 require 'conexion.php';// se realiza la conexión a la BD
-$sql = "INSERT INTO libros (titulo, autor, isbn, sinopsis, editorial, materia, paginas, encuadernacion) VALUES 
-('$titulo', '$autor', '$isbn', '$sinopsis', '$editorial', '$materia', '$paginas', '$encuadernacion')";
+$sql = "INSERT INTO libros (titulo, autor, isbn, sinopsis, editorial, materia, paginas, encuadernacion, precio) VALUES 
+('$titulo', '$autor', '$isbn', '$sinopsis', '$editorial', '$materia', '$paginas', '$encuadernacion', '$precio')";
 if ($conexion->query($sql) === TRUE) 
 {
     $estado_insercion = true;

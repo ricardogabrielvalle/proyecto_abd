@@ -38,6 +38,10 @@ include 'navbar.php';
 	      <option>Pasta dura</option>
 	    </select>
 	  </div>
+	  <div class="form-group">
+	    <label for="precio">Precio</label>
+	    <input type="text" class="form-control" id="precio" name="precio" placeholder="Escriba el precio del libro">
+	  </div>
 	  <button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </div>
