@@ -78,7 +78,7 @@
                 <input type="text" class="form-control" id="direccion" placeholder="1234 Main St" name="direccion">
               </div>
                 <!-- Button trigger modal registrar -->
-              <button type="submit" class="btn btn-secondary btn-sm">Registrate</button>
+              <input type="submit" class="btn btn-secondary btn-sm" value="Registrate" onclick="cifrar()">
             </form>
           </div>
           <div class="modal-footer">
@@ -147,5 +147,13 @@
       © 2019 Copyright:
         <a href="index.php"> Librería San Francisco.</a>
     </div>
+    <script src="sha1.js"></script>
+    <script>
+        function cifrar()
+        {
+            var input_password_r = document.getElementById("password_r");
+            input_password_r.value = SHA1(input_password_r.value);
+        }
+    </script>
 </body>
 </html>

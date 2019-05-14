@@ -48,12 +48,23 @@ else
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Adm. Base de datos
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="respaldo.php">Respaldar BD</a>
+                        <a class="dropdown-item" href="auditoria.php">Auditoria</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Gestionar libros
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="agregar_libro.php">Agregar libro</a>
                         <a class="dropdown-item" href="modificar_libros.php">Modificar libro</a>
-                        <a class="dropdown-item" href="#">Eliminar libro</a>
+                        <a class="dropdown-item" href="eliminar_libro.php">Eliminar libro</a>
                         <a class="dropdown-item" href="mostrar_libros.php">Mostrar libro</a>
                       </div>
                     </li>

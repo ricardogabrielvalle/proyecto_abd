@@ -8,7 +8,9 @@ $editorial = $_POST['editorial'];
 $materia = $_POST['materia'];
 $paginas = $_POST['paginas'];
 $encuadernacion = $_POST['encuadernacion'];
+
 require "conexion.php";
+
 $error = false;
 $conexion->autocommit(false);
 //inician las transacciones
