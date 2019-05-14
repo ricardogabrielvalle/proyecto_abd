@@ -1,8 +1,8 @@
 <?php
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = $_POST['email_r'];
+$password = $_POST['password_r'];
 $direccion = $_POST['direccion'];
 
 require ("conexion.php");
@@ -66,7 +66,6 @@ $resulta = $conexion->query($consulta);
 			    <label for="direccion"><strong>Direccion: </strong></label>
 			    	<h5 class="card-title"><?php echo $row['direccion']; ?></h5>
 			    <a href="index.php" class="btn btn-secondary">Salir</a>
-				<a href="" class="btn btn-secondary">Mostrar registros</a>
 			  </div>
 			</div>
 			</center>

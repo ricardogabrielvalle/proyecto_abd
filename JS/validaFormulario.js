@@ -1,10 +1,10 @@
 function valida() 
 {
 	var espacio = new RegExp(/\s/);
-	var validaNombre = document.getElementById('nombre').value;
-	var validaApellido = document.getElementById('apellido').value;
-	var email = document.getElementById("email").value;
-	var password  = document.getElementById("password").value;
+	var validaNombre = document.getElementById("nombre").value;
+	var validaApellido = document.getElementById("apellido").value;
+	var email = document.getElementById("email_r").value;
+	var password  = document.getElementById("password_r").value;
 	var direccion = document.getElementById("direccion").value;
 
 	

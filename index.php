@@ -66,11 +66,11 @@
               <div class="form-row">
                 <div class="form-group col-md-8">
                   <label for="Emai">Email</label>
-                  <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+                  <input type="text" class="form-control" id="email_r" placeholder="Email" name="email_r">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="Password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                  <input type="password" class="form-control" id="password_r" placeholder="Password" name="password_r">
                 </div>
               </div>
               <div class="form-group">
@@ -87,7 +87,59 @@
         </div>
       </div>
     </div>
-
+    <?php 
+    require 'conexion.php';
+    $sql = "SELECT * FROM libros";
+    $resultado = $conexion->query($sql);
+    ?>
+    <div class="container" style="margin:auto;">
+      <h1>Libros</h1>
+      <form action="index.php">
+          <table class="table table-responsive">
+              <thead>
+                  <tr>
+                      <th scope="col">Código</th>
+                      <th scope="col">Título</th>
+                      <th scope="col">Autor</th>
+                      <th scope="col">ISBN</th>
+                      <th scope="col">Sinopsis</th>
+                      <th scope="col">Editorial</th>
+                      <th scope="col">Materia</th>
+                      <th scope="col">Páginas</th>
+                      <th scope="col">Encuadernación</th>
+                  </tr>
+              </thead>
+              <?php while($row = $resultado->fetch_assoc()):?>
+              <?php
+                $codigo = $row["codigo"];
+                  $titulo = $row["titulo"];
+                  $autor = $row["autor"];
+                  $isbn = $row["isbn"];
+                  $sinopsis = $row["sinopsis"];
+                  $editorial = $row["editorial"];
+                  $materia = $row["materia"];
+                  $paginas = $row["paginas"];
+                  $encuadernacion = $row["encuadernacion"];
+              ?>
+              <tbody>
+                  <tr>
+                      <th scope="row"><?php echo $codigo ?></th>
+                      <td><?php echo $titulo ?></td>
+                      <td><?php echo $autor ?></td>
+                      <td><?php echo $isbn ?></td>
+                      <td><?php echo $sinopsis ?></td>
+                      <td><?php echo $editorial ?></td>
+                      <td><?php echo $materia ?></td>
+                      <td><?php echo $paginas ?></td>
+                      <td><?php echo $encuadernacion ?></td>
+                  </tr>
+                  
+                  <?php endwhile; ?>
+              </tbody>
+          </table>
+      </form>
+  </div>
+  <?php $conexion->close(); ?>
 	<!-- Footer -->
     <footer class="page-footer font-small blue fixed-bottom">
     <!-- Copyright -->

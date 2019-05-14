@@ -4,7 +4,7 @@ $inicio = false;
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-	require ("conexion.php");
+require ("conexion.php");
 
 $consulta = "SELECT email, password FROM admin WHERE email = '$email' AND password = '$password'";
 $resulta = $conexion->query($consulta);
@@ -35,6 +35,7 @@ if ($resulta->num_rows > 0)
 if($inicio == false)
 {
     $conexion->close();
+    echo "error de inicio de sesion";
     header('Location: ');
 }
 ?>

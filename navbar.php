@@ -51,10 +51,10 @@ else
                         Gestionar libros
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Agregar libro</a>
-                        <a class="dropdown-item" href="#">Modificar libro</a>
+                        <a class="dropdown-item" href="agregar_libro.php">Agregar libro</a>
+                        <a class="dropdown-item" href="modificar_libros.php">Modificar libro</a>
                         <a class="dropdown-item" href="#">Eliminar libro</a>
-                        <a class="dropdown-item" href="#">Mostrar libro</a>
+                        <a class="dropdown-item" href="mostrar_libros.php">Mostrar libro</a>
                       </div>
                     </li>
                   </ul>
@@ -91,10 +91,10 @@ else
 
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Libros</a>
+                      <a class="nav-link" href="mostrar_libros.php">Libros</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -106,7 +106,7 @@ else
                       </div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Sobre Nosotros</a>
+                      <a class="nav-link" href="nosotros.php">Sobre Nosotros</a>
                     </li>
                   </ul>
                   
@@ -143,24 +143,15 @@ else
 
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Libros
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
+                      <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Sobre Nosotros</a>
+                      <a class="nav-link" href="mostrar_libros.php">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="nosotros.php">Sobre Nosotros</a>
                     </li>
                   </ul>
-
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
