@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2019 a las 06:46:49
+-- Tiempo de generación: 14-05-2019 a las 07:54:31
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.6.15
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `email` varchar(100) NOT NULL,
-  `password` varchar(16) NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`email`, `password`) VALUES
-('inna-1333@hotmail.com', '5f6955d227a320c7');
+('inna-1333@hotmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(30) NOT NULL,
   `apellido` varchar(25) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(16) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `direccion` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -128,7 +128,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`nombre`, `apellido`, `email`, `password`, `direccion`) VALUES
-('Luis Ernesto', 'Ramirez Rincon', 'luis.err97@gmail.com', '5f6955d227a320c7', 'Candido Carlin #337 ');
+('Luis Ernesto', 'Ramirez Rincon', 'luis.err97@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Candido Carlin #337 ');
 
 --
 -- Índices para tablas volcadas

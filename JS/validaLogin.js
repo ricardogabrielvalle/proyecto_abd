@@ -18,7 +18,7 @@ function valida_Login()
 		return false;
 	}
 
-	else if(password.length>10)
+	else if(password.length>99)
 	{
 		alertify.alert("Error","La Contraseña es mayor a 10 caracteres.").set('label', 'Aceptar');
 		return false;

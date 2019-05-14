@@ -27,7 +27,7 @@
                 <label for="InputPassword1">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
               </div>
-              <button type="submit" class="btn btn-secondary btn-sm">Ingresar</button>
+              <input type="submit"  class="btn btn-secondary btn-sm" values="Ingresar" onclick="cifrar1()">
             </form>
           </div>
           <div class="modal-footer">
@@ -153,6 +153,11 @@
         {
             var input_password_r = document.getElementById("password_r");
             input_password_r.value = SHA1(input_password_r.value);
+        }
+        function cifrar1()
+        {
+            var input_password = document.getElementById("password");
+            input_password.value = SHA1(input_password.value);
         }
     </script>
 </body>
