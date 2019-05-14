@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2019 a las 10:28:09
+-- Tiempo de generación: 14-05-2019 a las 19:51:15
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -58,8 +58,8 @@ CREATE TABLE `favoritos` (
 
 INSERT INTO `favoritos` (`id`, `email`, `codigo_libro`) VALUES
 (1, 'ricardogabrielvalle@gmail.com', 7),
-(2, 'ricardogabrielvalle@gmail.com', 6),
-(3, 'ricardogabrielvalle@gmail.com', 9);
+(4, 'ricardogabrielvalle@gmail.com', 10),
+(6, 'ricardogabrielvalle@gmail.com', 5);
 
 -- --------------------------------------------------------
 
@@ -76,18 +76,20 @@ CREATE TABLE `libros` (
   `editorial` varchar(50) NOT NULL,
   `materia` varchar(50) NOT NULL,
   `paginas` int(11) NOT NULL,
-  `encuadernacion` varchar(25) NOT NULL
+  `encuadernacion` varchar(25) NOT NULL,
+  `precio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `libros`
 --
 
-INSERT INTO `libros` (`codigo`, `titulo`, `autor`, `isbn`, `sinopsis`, `editorial`, `materia`, `paginas`, `encuadernacion`) VALUES
-(5, 'DrÃ¡cula', 'Bram Stoker', '82839129310', 'Un libro emocionante sobre el primer vampiro...', 'Debolsillo', 'Novelas', 545, 'Pasta dura'),
-(6, 'Crimen y castigo', 'Fedor Dostoievsky', '192039412', 'Crimen y castigo, novela rusa.', 'Debolsillo', 'Novelas', 760, 'Pasta dura'),
-(7, 'CanciÃ³n de hielo y fuego - Juego de tronos', 'George R.R. Martin', ' 9786073128834', 'En el legendario mundo de los Siete Reinos, lord Stark y su familia se encuentran en el centro de un conflicto que desatarÃ¡ todas las pasiones y la mÃ¡s mortal de las batallas...', 'Debolsillo', 'FicciÃ³n', 560, 'Pasta tradicional'),
-(9, 'Demian', 'Hermann Hesse ', '34112323122', 'Demian...', 'PorrÃºa', 'Novelas', 134, 'Pasta tradicional');
+INSERT INTO `libros` (`codigo`, `titulo`, `autor`, `isbn`, `sinopsis`, `editorial`, `materia`, `paginas`, `encuadernacion`, `precio`) VALUES
+(5, 'DrÃ¡cula', 'Bram Stoker', '82839129310', 'Un libro emocionante sobre el primer vampiro...', 'Debolsillo', 'Novelas', 545, 'Pasta dura', 200),
+(6, 'Crimen y castigo', 'Fedor Dostoievsky', '192039412', 'Crimen y castigo, novela rusa.', 'Debolsillo', 'Novelas', 760, 'Pasta dura', 160),
+(7, 'CanciÃ³n de hielo y fuego - Juego de tronos', 'George R.R. Martin', ' 9786073128834', 'En el legendario mundo de los Siete Reinos, lord Stark y su familia se encuentran en el centro de un conflicto que desatarÃ¡ todas las pasiones y la mÃ¡s mortal de las batallas...', 'Debolsillo', 'FicciÃ³n', 560, 'Pasta tradicional', 305),
+(9, 'Demian', 'Hermann Hesse ', '34112323122', 'Demian...', 'PorrÃºa', 'Novelas', 134, 'Pasta tradicional', 100),
+(10, 'CanciÃ³n de hielo y fuego - Choque de reyes', 'George R.R. Martin', '9786073128841', 'Segunda parte de la historia de canciÃ³n de hielo y fuego.', 'Debolsillo', 'FicciÃ³n', 927, 'Pasta tradicional', 306);
 
 --
 -- Disparadores `libros`
@@ -119,7 +121,8 @@ CREATE TABLE `tabla_auditoria` (
 
 INSERT INTO `tabla_auditoria` (`is_auditoria`, `titulo_copia`, `autor_copia`, `isbn_copia`, `usuario`, `fecha`) VALUES
 (1, 'Ejemplo de auditoria', 'Luis Ramirez', '12132321631', 'root@localhost', '2019-05-13'),
-(2, 'Demian', 'Hermann Hesse ', '34112323122', 'root@localhost', '2019-05-14');
+(2, 'Demian', 'Hermann Hesse ', '34112323122', 'root@localhost', '2019-05-14'),
+(3, 'CanciÃ³n de hielo y fuego - Choque de reyes', 'George R.R. Martin', '9786073128841', 'root@localhost', '2019-05-14');
 
 -- --------------------------------------------------------
 
@@ -185,19 +188,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `tabla_auditoria`
 --
 ALTER TABLE `tabla_auditoria`
-  MODIFY `is_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `is_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
