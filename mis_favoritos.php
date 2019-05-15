@@ -65,9 +65,50 @@
 				</tbody>
         </table>
         <div class="container" align="right">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#comprar">
+              Comprar libro(s)
+            </button>
         	<button type="submit" class="btn btn-primary" name="send">Ir al inicio</button>
         </div>
     </form>
 </div>
+        <!-- Modal -->
+        <div class="modal fade" id="comprar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comprar libro(s).</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3>Total de la compra: <?php echo $precio ?></h3>
+                <form action="comprar.php" method="post">
+                  <div class="form-group">
+                    <input type="hidden" value="<?php echo $codigo ?>" name="codigo">
+                    <label for="Numero">Numero de tarjeta.</label>
+                    <input type="text" class="form-control" id="tarjeta" placeholder="4152 3129 1942 4629" name="tarjeta">
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-2">
+                        <label for="CVC">CVC.</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="000" name="cvc">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="Fecha">Fecha.</label>
+                        <input type="date" id="fecha" name="fecha">
+                      </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Realizar compra">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 </body>
 </html>
