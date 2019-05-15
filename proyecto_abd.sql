@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2019 a las 19:51:15
--- Versión del servidor: 10.1.29-MariaDB
--- Versión de PHP: 7.2.0
+-- Tiempo de generación: 15-05-2019 a las 22:22:21
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,6 +43,29 @@ INSERT INTO `admin` (`email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `compra`
+--
+
+CREATE TABLE `compra` (
+  `tarjeta` bigint(20) NOT NULL,
+  `cvc` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `compra`
+--
+
+INSERT INTO `compra` (`tarjeta`, `cvc`, `fecha`) VALUES
+(4152125478963254, 214, '2019-04-30'),
+(4152125478963204, 374, '2019-04-28'),
+(0, 0, '0000-00-00'),
+(4152125478963204, 15, '2019-05-04'),
+(4152125478789456, 854, '2019-12-06');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `favoritos`
 --
 
@@ -58,8 +81,7 @@ CREATE TABLE `favoritos` (
 
 INSERT INTO `favoritos` (`id`, `email`, `codigo_libro`) VALUES
 (1, 'ricardogabrielvalle@gmail.com', 7),
-(4, 'ricardogabrielvalle@gmail.com', 10),
-(6, 'ricardogabrielvalle@gmail.com', 5);
+(4, 'ricardogabrielvalle@gmail.com', 10);
 
 -- --------------------------------------------------------
 
@@ -86,10 +108,9 @@ CREATE TABLE `libros` (
 
 INSERT INTO `libros` (`codigo`, `titulo`, `autor`, `isbn`, `sinopsis`, `editorial`, `materia`, `paginas`, `encuadernacion`, `precio`) VALUES
 (5, 'DrÃ¡cula', 'Bram Stoker', '82839129310', 'Un libro emocionante sobre el primer vampiro...', 'Debolsillo', 'Novelas', 545, 'Pasta dura', 200),
-(6, 'Crimen y castigo', 'Fedor Dostoievsky', '192039412', 'Crimen y castigo, novela rusa.', 'Debolsillo', 'Novelas', 760, 'Pasta dura', 160),
+(6, 'Crimen y castigo', 'Fedor Dostoievsky', '192039412', 'Crimen y castigo, novela rusa.', 'Debolsillo', 'Novelas', 760, 'Pasta tradicional', 168),
 (7, 'CanciÃ³n de hielo y fuego - Juego de tronos', 'George R.R. Martin', ' 9786073128834', 'En el legendario mundo de los Siete Reinos, lord Stark y su familia se encuentran en el centro de un conflicto que desatarÃ¡ todas las pasiones y la mÃ¡s mortal de las batallas...', 'Debolsillo', 'FicciÃ³n', 560, 'Pasta tradicional', 305),
-(9, 'Demian', 'Hermann Hesse ', '34112323122', 'Demian...', 'PorrÃºa', 'Novelas', 134, 'Pasta tradicional', 100),
-(10, 'CanciÃ³n de hielo y fuego - Choque de reyes', 'George R.R. Martin', '9786073128841', 'Segunda parte de la historia de canciÃ³n de hielo y fuego.', 'Debolsillo', 'FicciÃ³n', 927, 'Pasta tradicional', 306);
+(9, 'Demian', 'Hermann Hesse ', '34112323122', 'Demian...', 'PorrÃºa', 'Novelas', 134, 'Pasta tradicional', 100);
 
 --
 -- Disparadores `libros`
@@ -122,7 +143,8 @@ CREATE TABLE `tabla_auditoria` (
 INSERT INTO `tabla_auditoria` (`is_auditoria`, `titulo_copia`, `autor_copia`, `isbn_copia`, `usuario`, `fecha`) VALUES
 (1, 'Ejemplo de auditoria', 'Luis Ramirez', '12132321631', 'root@localhost', '2019-05-13'),
 (2, 'Demian', 'Hermann Hesse ', '34112323122', 'root@localhost', '2019-05-14'),
-(3, 'CanciÃ³n de hielo y fuego - Choque de reyes', 'George R.R. Martin', '9786073128841', 'root@localhost', '2019-05-14');
+(3, 'CanciÃ³n de hielo y fuego - Choque de reyes', 'George R.R. Martin', '9786073128841', 'root@localhost', '2019-05-14'),
+(5, 'Tiende tu cama y otros pequeÃ±os hÃ¡bitos que camb', 'MCRAVEN, WILLIAM', '9786070745119', 'root@localhost', '2019-05-15');
 
 -- --------------------------------------------------------
 
@@ -188,19 +210,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tabla_auditoria`
 --
 ALTER TABLE `tabla_auditoria`
-  MODIFY `is_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `is_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
